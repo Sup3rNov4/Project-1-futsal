@@ -1,0 +1,5 @@
+<h1>Welcome. Thank you for logging in.</h1>
+
+<% if @current_player.present? %>
+  You are logged in as <%= @current_player.name %> 
+<% end %>

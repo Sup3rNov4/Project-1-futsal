@@ -1,0 +1,23 @@
+require jquery.ui.core
+require jquery.ui.theme
+require dataTables/src/demo_table_jui
+
+
+body {
+  text-align: center;
+  background: linear-gradient(orange, lightblue);
+}
+
+p {
+  font-size: 12px;
+}
+
+.comps {
+  text-align: left;
+}
+
+.feature1 img {
+  max-width: 30%;
+  display: inline-block;
+
+}

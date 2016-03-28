@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Futsal</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav>
+    <%= link_to 'Home', root_path %>
+    <%= link_to "Competitions", competition_path %>
+    <% if @current_player.present? %>
+    <% if @current_player.admin? %>
+        <%= link_to 'All Players', players_path %>
+    <% end %>
+        <%= link_to "Logout #{@current_player.email}", login_path, :method => :delete %>
+        <%= link_to "Edit Profile", edit_player_path(@current_player) %>
+    <% else %>
+        <%= link_to "Sign up", signup_path %>
+        <%= link_to "Login", login_path %>
+    <% end %>
+       </nav>
+
+  <% if flash[:error].present? %>
+  <h2> class="error"
+   <%= flash[:error] %>
+  </h2>
+  <% end %>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+<h1>ALL PLAYERS</h1>
+<% @players.each do |player| %>
+<p>
+  <%= player.email %> since <%= player.created_at %>
+</p>
+<% end %>
