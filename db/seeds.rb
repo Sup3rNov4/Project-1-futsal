@@ -57,6 +57,7 @@ t7 = Team.create :name => "Atletico", :competition => "U18 Women"
 t8 = Team.create :name => "Juve", :competition => "U18 Women"
 
 Season.destroy_all
+
 s1 = Season.create :season => "Winter", :week => "1"
 s2 = Season.create :season => "Winter", :week => "2"
 s3 = Season.create :season => "Winter", :week => "3"
@@ -67,6 +68,7 @@ s7 = Season.create :season => "Winter", :week => "7"
 s8 = Season.create :season => "Winter", :week => "8"
 s9 = Season.create :season => "Winter", :week => "9"
 s10 = Season.create :season => "Winter", :week => "10"
+
 
 Game.destroy_all
 g1 = Game.create :won => "true", :lost => "false", :drawn => "false"

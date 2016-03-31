@@ -17,10 +17,6 @@ class PlayersController < ApplicationController
 
 before_action :authorise, :only => [:index]
 
-  def show
-    @team = Team.find params[:id]
-  end
-
   def u18men
     @teams = Team.all
   end

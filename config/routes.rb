@@ -25,7 +25,6 @@ Rails.application.routes.draw do
   get "/players/competitions" => "players#competitions", :as => 'competition'
   get "/signup" => "players#new"
   get "/players/new" => "players#new"
-  get "players/:id/show" => "players#show"
   get "/players/aamen" => "players#aamen", :as => "aamen"
   get "/players/aamix" => "players#aamix", :as => "aamix"
   get "/players/u18men" => "players#u18men", :as => "u18men"
