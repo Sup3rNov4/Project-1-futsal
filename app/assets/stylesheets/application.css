@@ -68,10 +68,27 @@ nav.right {
   font-size: 20px;
 }
 
+.social {
+  background-color: lightblue;
+  color: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 .wrap {
   background: linear-gradient(orange, lightblue);
   padding: 10px;
   color: lavender;
+}
+
+.social img {
+  border-radius: 25%;
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 5px;
+  margin-top: 5px;
 }
 
 body {
@@ -79,6 +96,7 @@ body {
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 20px;
+  margin-bottom: 5%;
   text-align: center;
   background: linear-gradient(
     to right,
