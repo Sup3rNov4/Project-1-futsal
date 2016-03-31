@@ -111,6 +111,16 @@ h1 {
 
 h2 {
   font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.welcome {
+  color: lavender;
+}
+
+h2.error {
+  color: lavender;
 }
 
 h3 {
@@ -138,7 +148,6 @@ p {
   display: block;
   font-size: 18px;
   flex-direction: column;
-
 }
 
 .container {
