@@ -1,19 +1,19 @@
 <div class="wrap">
 
-<h1>All Ages Mens</h1>
+<h1>All Ages Mixed</h1>
 
 <table class="ladder" align="center">
 
 <% @teams.each do |team| %>
-<% if team.competition === "All-Age Men"%>
+<% if team.competition === "All-Age Mixed"%>
 
-  <tr>
-    <td>Team</td>
-    <td>Played</td>
-    <td>Won</td>
-    <td>Lost</td>
-    <td>Drawn</td>
-  </tr>
+<tr>
+  <td>Team</td>
+  <td>Played</td>
+  <td>Won</td>
+  <td>Lost</td>
+  <td>Drawn</td>
+</tr>
   <tr>
     <td><%= team.name %><% link_to "/player/:id/show" %></td>
     <td><%= team.games.count %></td>
@@ -28,36 +28,37 @@
 <h3>Draw</h3>
 <table class="draw" align="center">
   <tr>
-    <td>14:00</td>
+    <td>13:20</td>
     <td>Sunday, 10/10/10 </td>
-    <td>Rovers vs Strikers</td>
+    <td>Bayern vs Barca</td>
   </tr>
   <tr>
-    <td>13:20</td>
+    <td>12:40</td>
     <td>Sunday, 17/10/10</td>
-    <td>Strikers vs Rovers</td>
-  </tr>
-  <tr>
-    <td>14:00</td>
-    <td>Sunday, 24/10/10</td>
-    <td>Rovers vs Strikers</td>
-  </tr>
-  <tr>
-    <td>14:40</td>
-    <td>Sunday, 31/10/10</td>
-    <td>Strikers vs Rovers</td>
+    <td>Barca vs Bayern</td>
   </tr>
   <tr>
     <td>13:20</td>
-    <td>Sunday, 7/11/10</td>
-    <td>Rovers vs Strikers</td>
+    <td>Sunday, 24/10/10</td>
+    <td>Bayern vs Barca</td>
   </tr>
   <tr>
     <td>14:00</td>
+    <td>Sunday, 31/10/10</td>
+    <td>Barca vs Bayern</td>
+  </tr>
+  <tr>
+    <td>12:40</td>
+    <td>Sunday, 7/11/10</td>
+    <td>Bayern vs Barca</td>
+  </tr>
+  <tr>
+    <td>13:20</td>
     <td>Sunday, 14/11/10</td>
-    <td>Strikers vs Rovers</td>
+    <td>Barca vs Bayern</td>
   </tr>
 </table>
+
 <p></p>
 <%= link_to "Go Back", competition_path %>
 

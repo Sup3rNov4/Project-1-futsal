@@ -8,6 +8,6 @@
 #
 
 class Season < ActiveRecord::Base
-  has_and_belongs_to_many :teams
-  has_many :players, :through => :teams
+  has_many :games
+  has_and_belongs_to_many :players
 end

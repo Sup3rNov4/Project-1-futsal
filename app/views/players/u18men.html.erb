@@ -1,1 +1,67 @@
+<div class="wrap">
+
 <h1>U-18s Men</h1>
+
+<table class="ladder" align="center">
+<% @teams.each do |team| %>
+<% if team.competition === "U18 Men"%>
+<tr>
+  <td>Team</td>
+  <td>Played</td>
+  <td>Won</td>
+  <td>Lost</td>
+  <td>Drawn</td>
+</tr>
+<tr>
+  <td><%= team.name %><% link_to "/player/:id/show" %></td>
+  <td><%= team.games.count %></td>
+  <td><%= team.wins.count %></td>
+  <td><%= team.losses.count %></td>
+  <td><%= team.draws.count %></td>
+</tr>
+<% end %>
+<% end %>
+</table>
+
+
+
+
+  <h3>Draw</h3>
+  <p></p>
+<table class="draw" align="center">
+  <tr>
+    <td>14:40</td>
+    <td>Sunday, 10/10/10 </td>
+    <td>Roma vs Inter</td>
+  </tr>
+  <tr>
+    <td>14:00</td>
+    <td>Sunday, 17/10/10</td>
+    <td>Inter vs Roma</td>
+  </tr>
+  <tr>
+    <td>14:40</td>
+    <td>Sunday, 24/10/10</td>
+    <td>Roma vs Inter</td>
+  </tr>
+  <tr>
+    <td>15:20</td>
+    <td>Sunday, 31/10/10</td>
+    <td>Inter vs Roma</td>
+  </tr>
+  <tr>
+    <td>14:00</td>
+    <td>Sunday, 7/11/10</td>
+    <td>Roma vs Inter</td>
+  </tr>
+  <tr>
+    <td>14:40</td>
+    <td>Sunday, 14/11/10</td>
+    <td>Inter vs Roma</td>
+  </tr>
+</table>
+
+<p></p>
+<%= link_to "Go Back", competition_path %>
+
+</div>

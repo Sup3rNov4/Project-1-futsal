@@ -1,13 +1,27 @@
+<div class="col-md-8 col-md-offset-2">
+  <div class="row">
+    <div class="panel panel-default">
+      <div class="panel-heading">
 <h1>Login</h1>
 
-<%= form_tag login_path do %>
+<%= form_tag login_path, :html =>{class: "form-vertical", role: "form"} do %>
 
-<%= label_tag :email %>
-<%= text_field_tag :email %>
+<div class="form-group">
+  <%= label_tag :email %>
+  <%= text_field_tag :email, nil, :class => "form-control" %>
+</div>
 
-<%= label_tag :password %>
-<%= password_field_tag :password %>
+<div class="form-group">
+  <%= label_tag :password %>
+  <%= password_field_tag :password, nil, :class => "form-control" %>
+</div>
 
-<%= submit_tag "Login" %>
+<div class="form-group">
+  <%= submit_tag "Login", class: "btn btn-primary btn-lg" %>
+</div>
 
 <% end %>
+</div>
+</div>
+</div>
+</div>

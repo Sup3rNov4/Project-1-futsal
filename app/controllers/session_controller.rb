@@ -15,6 +15,7 @@ end
 
 def destroy
   session[:player_id] = nil
+  flash[:error] = "You have successfully logged out."
   redirect_to root_path
  end
 

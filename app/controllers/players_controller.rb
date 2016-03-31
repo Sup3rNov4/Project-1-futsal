@@ -1,17 +1,40 @@
+# == Schema Information
+#
+# Table name: players
+#
+#  id              :integer          not null, primary key
+#  email           :text
+#  team_id         :integer
+#  name            :text
+#  password_digest :text
+#  dob             :text
+#  created_at      :datetime
+#  updated_at      :datetime
+#  admin           :boolean          default(FALSE)
+#
+
 class PlayersController < ApplicationController
 
 before_action :authorise, :only => [:index]
 
+  def show
+    @team = Team.find params[:id]
+  end
+
   def u18men
+    @teams = Team.all
   end
 
   def u18women
+    @teams = Team.all
   end
 
   def aamen
+    @teams = Team.all
   end
 
-  def aawomen
+  def aamix
+    @teams = Team.all
   end
 
   def competitions

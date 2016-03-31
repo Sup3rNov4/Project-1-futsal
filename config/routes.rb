@@ -25,8 +25,9 @@ Rails.application.routes.draw do
   get "/players/competitions" => "players#competitions", :as => 'competition'
   get "/signup" => "players#new"
   get "/players/new" => "players#new"
+  get "players/:id/show" => "players#show"
   get "/players/aamen" => "players#aamen", :as => "aamen"
-  get "/players/aawomen" => "players#aawomen", :as => "aawomen"
+  get "/players/aamix" => "players#aamix", :as => "aamix"
   get "/players/u18men" => "players#u18men", :as => "u18men"
   get "/players/u18women" => "players#u18women", :as => "u18women"
 
@@ -36,6 +37,5 @@ Rails.application.routes.draw do
   get '/pages/welcome' => "pages#welcome", :as => "welcome"
   get '/pages/highlights' => "pages#highlights", :as => "highlight"
   get '/pages/archives' => "pages#archives", :as => "archive"
-
 
 end

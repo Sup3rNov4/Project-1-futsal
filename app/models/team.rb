@@ -9,5 +9,19 @@
 
 class Team < ActiveRecord::Base
   has_many :players
-  has_and_belongs_to_many :seasons
+  has_many :goals, :through => :players
+  has_many :games
+
+  def wins
+    games.where :won => true
+  end
+
+  def losses
+    games.where :lost => true
+  end
+
+  def draws
+    games.where :drawn => true
+  end
+
 end

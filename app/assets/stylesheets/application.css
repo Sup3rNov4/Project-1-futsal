@@ -1,20 +1,127 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
 
+td {
+  border: 2px solid black;
+  vertical-align:middle;
+  text-align: center;
+  padding: 5px;
+}
+
+td:hover {
+  background-color: #f5f5f5;
+}
+
+table {
+  vertical-align: middle;
+  border-collapse: collapse;
+  padding: 10px;
+  max-width: 60%;
+  line-height: 2em;
+  color: black;
+  font-size: 15px;
+}
+
+a {
+  margin-left: 5px;
+}
+
+.nav {
+  font-size: 20px;
+  background-color: gainsboro;
+  flex-grow: 1;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.col-md-8 {
+  margin-top: 2%;
+}
+
+nav.left {
+  text-align: left;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+nav.right {
+  text-align: right;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+.wrap {
+  background: linear-gradient(orange, lightblue);
+  padding: 10px;
+  color: lavender;
+}
 
 body {
+  box-sizing: border-box;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 20px;
   text-align: center;
-  background: linear-gradient(orange, lightblue);
+  background: linear-gradient(
+    to right,
+    #ff9e2c 0%,
+    #ff9e2c 50%,
+    #b6701e 50%,
+    #b6701e 100%
+  );
+}
+
+h1 {
+  text-shadow: 0 5px 0 #FFFFF;
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 22px;
 }
 
 p {
-  font-size: 12px;
+  font-size: 15px;
+}
+
+.main {
+  text-align: justify;
 }
 
 .comps {
-  text-align: left;
+  text-align: center;
 }
 
 .feature1 img {
   max-width: 30%;
   display: inline-block;
+}
+
+.form-group {
+  display: block;
+  font-size: 18px;
+  flex-direction: column;
 
 }
