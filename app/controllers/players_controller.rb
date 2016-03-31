@@ -17,6 +17,15 @@ class PlayersController < ApplicationController
 
 before_action :authorise, :only => [:index]
 
+  def month3
+  end
+
+  def month6
+  end
+
+  def alltime
+  end
+
   def u18men
     @teams = Team.all
   end

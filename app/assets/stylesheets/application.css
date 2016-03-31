@@ -49,22 +49,15 @@ a {
   flex-grow: 1;
   justify-content: space-around;
   padding: 5px;
+  overflow: hidden;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
 }
 
-nav.left {
-  text-align: left;
-  overflow: hidden;
-  font-size: 20px;
-}
-
-nav.right {
-  text-align: right;
-  overflow: hidden;
-  font-size: 20px;
+.nav a {
+  color: white;
 }
 
 .social {
@@ -79,7 +72,7 @@ nav.right {
 .wrap {
   background: linear-gradient(orange, lightblue);
   padding: 10px;
-  color: lavender;
+  color: black;
 }
 
 .social img {
@@ -95,6 +88,7 @@ body {
   margin-left: 5px;
   margin-right: 5px;
   text-align: center;
+  color: black;
   background: linear-gradient(
     to right,
     #ff9e2c 0%,
