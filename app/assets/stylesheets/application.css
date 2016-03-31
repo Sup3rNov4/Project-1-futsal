@@ -39,6 +39,10 @@ a {
   margin-left: 5px;
 }
 
+.gohome a {
+  color: yellow;
+}
+
 .nav {
   font-size: 20px;
   background-color: gainsboro;
@@ -49,10 +53,6 @@ a {
   width: 100%;
   top: 0;
   left: 0;
-}
-
-.col-md-8 {
-
 }
 
 nav.left {
