@@ -1,3 +1,3 @@
 class Topic < ActiveRecord::Base
-  has_many :threads
+  has_many :posts
 end

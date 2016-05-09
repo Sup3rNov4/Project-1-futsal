@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
 
   def current_player
-    current_player ||= Player.find(session[:player_id]) if session[:player_id]  #returns user object
+      @current_player ||= Player.find(session[:player_id]) if session[:player_id]  #returns user object
   end
 
   def logged_in?

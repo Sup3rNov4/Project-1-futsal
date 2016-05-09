@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160509001005) do
+ActiveRecord::Schema.define(version: 20160509020027) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "comment"
+    t.integer  "post_id"
+    t.integer  "player_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["player_id"], name: "index_comments_on_player_id", using: :btree
+  add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
 
   create_table "games", force: :cascade do |t|
     t.boolean "won"
@@ -68,6 +79,7 @@ ActiveRecord::Schema.define(version: 20160509001005) do
   end
 
   create_table "posts", force: :cascade do |t|
+    t.text     "title"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -76,7 +88,6 @@ ActiveRecord::Schema.define(version: 20160509001005) do
 
   create_table "seasons", force: :cascade do |t|
     t.text    "season"
-    t.integer "week"
     t.integer "team_id"
   end
 
@@ -90,18 +101,11 @@ ActiveRecord::Schema.define(version: 20160509001005) do
     t.text "competition"
   end
 
-  create_table "threads", force: :cascade do |t|
-    t.string   "title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "player_id"
-  end
-
   create_table "topics", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "thread_id"
+    t.integer  "post_id"
   end
 
   create_table "weeks", force: :cascade do |t|
@@ -111,4 +115,6 @@ ActiveRecord::Schema.define(version: 20160509001005) do
     t.integer  "game_id"
   end
 
+  add_foreign_key "comments", "players"
+  add_foreign_key "comments", "posts"
 end

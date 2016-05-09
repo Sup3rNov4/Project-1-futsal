@@ -19,9 +19,22 @@
   }
 }
 
+.post_content {
+  h1 {
+    font-weight: 100;
+    font-size: 20px;
+    color: #397CAC;
+    margin-top: 0;
+  }
+  p {
+    color: #B2BAC2;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 1.5;
+  }
+}
 
-
-#posts {
+#posts, .post_content {
   background-color: white;
   padding: 2em 5%;
   border-radius: .5em;

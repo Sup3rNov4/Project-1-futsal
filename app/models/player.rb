@@ -21,7 +21,6 @@ class Player < ActiveRecord::Base
   has_many :goals
   has_many :games
   has_many :posts
-  has_many :threads
-
+  has_many :comments
 
 end

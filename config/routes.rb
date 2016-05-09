@@ -20,10 +20,11 @@ Rails.application.routes.draw do
 
   root :to => 'pages#home'
 
-  
+  resources :posts do
+    resources :comments
+  end
 
   resources :players, :only => [:new, :create, :index, :update]
-  resources :posts
 
   get "/players/edit" => "players#edit", :as => 'edit_player'
   get "/players/competitions" => "players#competitions", :as => 'competition'
@@ -40,9 +41,10 @@ Rails.application.routes.draw do
   get "/forum" => "threads#index"
 
 
+
   get '/login' => 'session#new'
   post '/login' => 'session#create'
-  delete '/login' => 'session#destroy'
+  delete '/' => 'session#destroy'
   get '/pages/welcome' => "pages#welcome", :as => "welcome"
   get '/pages/highlights' => "pages#highlights", :as => "highlight"
   get '/pages/archives' => "pages#archives", :as => "archive"

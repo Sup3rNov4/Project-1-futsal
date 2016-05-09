@@ -15,7 +15,8 @@
 
 class PlayersController < ApplicationController
 
-before_action :authorise, :only => [:index]
+  attr_accessor :players
+  before_action :authorise, :only => [:index]
 
   def month3
   end
