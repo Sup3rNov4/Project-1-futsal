@@ -20,7 +20,11 @@ Rails.application.routes.draw do
 
   root :to => 'pages#home'
 
+  
+
   resources :players, :only => [:new, :create, :index, :update]
+  resources :posts
+
   get "/players/edit" => "players#edit", :as => 'edit_player'
   get "/players/competitions" => "players#competitions", :as => 'competition'
   get "/signup" => "players#new"
@@ -32,6 +36,9 @@ Rails.application.routes.draw do
   get "/players/aamix" => "players#aamix", :as => "aamix"
   get "/players/u18men" => "players#u18men", :as => "u18men"
   get "/players/u18women" => "players#u18women", :as => "u18women"
+
+  get "/forum" => "threads#index"
+
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'

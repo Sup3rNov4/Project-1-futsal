@@ -1,0 +1,15 @@
+<div class="post_index">
+  <header class="forum_header">
+    <h1>FutsalMundial Forum</h1>
+    <%= link_to "New Post", new_post_path %>
+  </header>
+
+  <div id="posts">
+    <% @posts.each do |post| %>
+    <div class="post">
+      <h2 class="post_title"><%= link_to post.content, post %></h2>
+      <p class="post_date"><%= "Published " + time_ago_in_words(post.created_at) + " ago by "%><%= post.player.email %></p>
+      <% end %>
+    </div>
+  </div>
+</div>

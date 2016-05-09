@@ -1,10 +1,20 @@
-<h1>NSWhales Futsal</h1>
+<h1>FutsalMundial</h1>
 
-<div class="feature1">
-  <%= image_tag "IMG_8202.jpg" %>
-  <%= image_tag "IMG_8185.jpg" %>
-  <%= image_tag "IMG_8174.jpg" %>
+<div class="fade">
+    <div index="0"><%= image_tag "IMG_8202.jpg" %></div>
+    <div index="1">><%= image_tag "IMG_8185.jpg" %></div>
+    <div index="2">><%= image_tag "IMG_8174.jpg" %></div>
 </div>
+
+<script type="text/javascript">
+  $('.fade').slick({
+    dots: true,
+    infinite: true,
+    speed: 750,
+    fade: true,
+    cssEase: 'linear'
+  });
+</script>
 
 <div>
 
@@ -12,8 +22,8 @@
 
 <h2>News</h2>
 <p>
-  NSWhales Futsal is a local competition designed to suit the needs of the players. For team registrations
-  and general enquiries please Email: admin@nswhalesfutsal.com.
+  FutsalMundial is a local competition designed to suit the needs of the players. For team registrations
+  and general enquiries please Email: admin@futsalmundial.com.
 </p>
 <p>
   For lost property please call 0400 000 000 or inquire at the office during business hours.
@@ -62,5 +72,5 @@
         <%=link_to image_tag("fblogo.jpg"), "https://www.facebook.com/", :target => "_blank" %>
         <%=link_to image_tag("instalogo.jpg"), "https://www.instagram.com/", :target => "_blank" %>
         <%=link_to image_tag("twitter.png"), "https://www.twitter.com/", :target => "_blank" %>
-    <p>Copyright © 2016 NSWhales Futsal Association</p>
+    <p>Copyright © 2016 FutsalMundial Association</p>
 </div>

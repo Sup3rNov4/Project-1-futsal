@@ -1,0 +1,48 @@
+// Place all the styles related to the post controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post_index body {
+  background-color: gainsboro;
+}
+
+.forum_header {
+  background-color: white;
+  a {
+    line-height: 60px;
+    background: #397CAC;
+    border-radius: 0.2em;
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+    padding: 0.5em;
+  }
+}
+
+
+
+#posts {
+  background-color: white;
+  padding: 2em 5%;
+  border-radius: .5em;
+  .post {
+    padding: 1em 0;
+    margin: 1em 0;
+
+    .post_title {
+      margin: 0;
+      a {
+        color: #397CAC;
+        text-decoration: none;
+        font-weight: 100;
+        font-size: 18px;
+      }
+    }
+    .post_date {
+      margin-bottom: 1em;
+      font-size: 9px;
+      color: #B2BAC2;
+          border-bottom: 1px solid #D1D1D1;
+    }
+  }
+}

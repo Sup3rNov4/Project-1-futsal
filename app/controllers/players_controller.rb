@@ -55,11 +55,12 @@ before_action :authorise, :only => [:index]
 
   def create
     @player = Player.new player_params
-  if @player.save
-    redirect_to root_path
-  else
-    render :new
-  end
+    if @player.save
+      session[:player_id] = @player.id
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def edit

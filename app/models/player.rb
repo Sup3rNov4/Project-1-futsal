@@ -16,15 +16,12 @@
 class Player < ActiveRecord::Base
   has_secure_password
   validates :email, :presence => true, :uniqueness => true
-  belongs_to :teams
+  belongs_to :team
   has_and_belongs_to_many :seasons
   has_many :goals
   has_many :games
+  has_many :posts
+  has_many :threads
 
-  # Paperclip
-  has_attached_file :photo,
-    :styles => {
-      :thumb => "100x100#",
-      :small  => "150x150>",
-      :medium => "200x200" }
+
 end

@@ -9,7 +9,7 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
+ *= require slick
  *= require_tree .
  *= require_self
  */
@@ -19,6 +19,7 @@ td {
   vertical-align:middle;
   text-align: center;
   padding: 5px;
+  
 }
 
 td:hover {
@@ -43,7 +44,7 @@ a {
   color: yellow;
 }
 
-.nav {
+/*.nav {
   font-size: 20px;
   background-color: gainsboro;
   flex-grow: 1;
@@ -54,11 +55,11 @@ a {
   width: 100%;
   top: 0;
   left: 0;
-}
+}*/
 
-.nav a {
+/*.nav a {
   color: white;
-}
+}*/
 
 .social {
   background-color: lightblue;
@@ -91,7 +92,7 @@ a {
   margin-top: 5px;
 }
 
-body {
+/*body {
   box-sizing: border-box;
   margin-left: 5px;
   margin-right: 5px;
@@ -104,7 +105,7 @@ body {
     #b6701e 50%,
     #b6701e 100%
   );
-}
+}*/
 
 h1 {
   text-shadow: 0 5px 0 #FFFFF;
@@ -142,10 +143,26 @@ p {
   text-align: center;
 }
 
-.feature1 img {
-  max-width: 30%;
+.fade {
+  opacity: 1;
   display: inline-block;
 }
+
+.slick-slide img {
+  /*display: block;
+  margin: 0 auto;*/
+  height: 350px;
+  width: 500px;
+}
+
+.slick-dots {
+  visibility: hidden;
+  display: none;
+}
+
+/*.fade img {
+  max-width: 50%;
+}*/
 
 .form-group {
   display: block;
@@ -164,5 +181,9 @@ p {
   }
   .nav a {
     display:block
+  }
+  iframe {
+    width: 330px;
+    height:250px;
   }
 }

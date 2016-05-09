@@ -1,5 +1,5 @@
 class Game < ActiveRecord::Base
   has_many :goals
-  belongs_to :teams
-  belongs_to :seasons
+  belongs_to :team
+  belongs_to :week
 end

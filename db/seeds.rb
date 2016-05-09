@@ -46,29 +46,45 @@ p40 = Player.create :email => "37@ga.co", :password_digest => "chicken", :name =
 Team.destroy_all
 t1 = Team.create :name => "Rovers", :competition => "All-Age Men"
 t2 = Team.create :name => "Strikers", :competition => "All-Age Men"
+t3 = Team.create :name => "Ballers", :competition => "All-Age Men"
+t4 = Team.create :name => "Londoners", :competition => "All-Age Men"
+t5 = Team.create :name => "Wanderers", :competition => "All-Age Men"
 
-t3 = Team.create :name => "Bayern", :competition => "All-Age Mixed"
-t4 = Team.create :name => "Barca", :competition => "All-Age Mixed"
+t6 = Team.create :name => "Bayern", :competition => "All-Age Mixed"
+t7 = Team.create :name => "Barca", :competition => "All-Age Mixed"
+t8 = Team.create :name => "PSG", :competition => "All-Age Mixed"
+t9 = Team.create :name => "Real", :competition => "All-Age Mixed"
+t10 = Team.create :name => "AC", :competition => "All-Age Mixed"
 
-t5 = Team.create :name => "Roma", :competition => "U18 Men"
-t6 = Team.create :name => "Inter", :competition => "U18 Men"
+t11 = Team.create :name => "Roma", :competition => "U18 Men"
+t12 = Team.create :name => "Inter", :competition => "U18 Men"
+t13 = Team.create :name => "Napoli", :competition => "U18 Men"
+t14 = Team.create :name => "Celtic", :competition => "U18 Men"
+t15 = Team.create :name => "Wolfsburg", :competition => "U18 Men"
 
-t7 = Team.create :name => "Atletico", :competition => "U18 Women"
-t8 = Team.create :name => "Juve", :competition => "U18 Women"
+t16 = Team.create :name => "Atletico", :competition => "U18 Women"
+t17 = Team.create :name => "Juve", :competition => "U18 Women"
+t18 = Team.create :name => "Leicester", :competition => "U18 Women"
+t19 = Team.create :name => "Tottenham", :competition => "U18 Women"
+t20 = Team.create :name => "Chelsea", :competition => "U18 Women"
 
 Season.destroy_all
+s1 = Season.create :season => "Spring"
+s2 = Season.create :season => "Summer"
+s3 = Season.create :season => "Autumn"
+s4 = Season.create :season => "Winter"
 
-s1 = Season.create :season => "Winter", :week => "1"
-s2 = Season.create :season => "Winter", :week => "2"
-s3 = Season.create :season => "Winter", :week => "3"
-s4 = Season.create :season => "Winter", :week => "4"
-s5 = Season.create :season => "Winter", :week => "5"
-s6 = Season.create :season => "Winter", :week => "6"
-s7 = Season.create :season => "Winter", :week => "7"
-s8 = Season.create :season => "Winter", :week => "8"
-s9 = Season.create :season => "Winter", :week => "9"
-s10 = Season.create :season => "Winter", :week => "10"
-
+Week.destroy_all
+w1 = Week.create :week => "1"
+w2 = Week.create :week => "2"
+w3 = Week.create :week => "3"
+w4 = Week.create :week => "4"
+w5 = Week.create :week => "5"
+w6 = Week.create :week => "6"
+w7 = Week.create :week => "7"
+w8 = Week.create :week => "8"
+w9 = Week.create :week => "9"
+w10 = Week.create :week => "10"
 
 Game.destroy_all
 g1 = Game.create :won => "true", :lost => "false", :drawn => "false"

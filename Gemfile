@@ -26,10 +26,9 @@ gem "annotate"
 gem "jwplayer-rails"
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
-gem "paperclip", "~> 3.1"
 gem 'bootstrap-sass', '~> 3.3.6'
-
 gem 'youtube_it', '~> 2.4.0'
+gem "jquery-slick-rails"
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
