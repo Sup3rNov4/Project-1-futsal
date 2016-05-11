@@ -20,6 +20,10 @@ Rails.application.routes.draw do
 
   root :to => 'pages#home'
 
+   resources :conversations do
+     resources :messages
+   end
+
   resources :posts do
     resources :comments
   end

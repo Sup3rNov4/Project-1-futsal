@@ -5,6 +5,14 @@ class ApplicationController < ActionController::Base
 
   # protect_from_forgery with: :exception
 
+  def conversation
+    @conversation = Conversation.between(params[:sender_id], params[:recipient_id]).first
+  end
+
+  def messages
+    @messages = @conversation.messages
+  end
+
   def player_id
     @player = current_player.id
   end

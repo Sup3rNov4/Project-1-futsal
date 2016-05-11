@@ -27,6 +27,7 @@ gem "jwplayer-rails"
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'semantic-ui-sass'
 gem 'youtube_it', '~> 2.4.0'
 gem "jquery-slick-rails"
 gem 'carrierwave'

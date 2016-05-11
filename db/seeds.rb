@@ -1,6 +1,6 @@
 Player.destroy_all
 p1 = Player.create :email => "craigslist@ga.co", :password => "chicken", :name => "craig"
-p2 = Player.create :email => "jt@ga.co", :password => "chicken", :name => "jess"
+p2 = Player.create :email => "jt@ga.co", :password => "chicken", :name => "joel"
 p3 = Player.create :email => "jbyun23@hotmail.com", :password => "chicken", :name => "jae"
 p4 = Player.create :email => "one@ga.co", :password => "chicken", :name => "harson"
 p5 = Player.create :email => "two@ga.co", :password => "chicken", :name => "dave"
