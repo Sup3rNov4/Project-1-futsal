@@ -6,9 +6,69 @@
   background-color: gainsboro;
 }
 
+
+// .header {
+//   border: 1px solid gainsboro;
+//   .headerL {
+//     width: 80%;
+//     float: left;
+//   }
+//   .headerR {
+//     width: 20%;
+//     float: left;
+//   }
+// }
+// body {
+//   background-color: gainsboro;
+// }
+
+.all_posts {
+  margin-top: .5em;
+}
+
+.create_post_head {
+  text-align: center;
+}
+
+#post_title {
+  background-color: gainsboro;
+  border-radius: .2em;
+}
+
+#post_content {
+  min-width: 50vw;
+  min-height: 30vh;
+  background-color: gainsboro;
+  border-radius: .2em;
+
+}
+
+.content_post {
+  p {
+    font-size: 30px;
+    font-weight: 250;
+  }
+}
+
+.create_post {
+  font-size: 15px;
+  .field {
+    text-align: center;
+  }
+  .actions {
+    margin-top: .5em;
+    margin-bottom: 5em;
+  }
+}
+
 .forum_header {
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: 1em;
   background-color: white;
-  a {
+  border-radius: 0.5em;
+  padding: 0.5em;
+  .new_post {
     line-height: 60px;
     background: #397CAC;
     border-radius: 0.2em;
@@ -19,7 +79,22 @@
   }
 }
 
+.post_button {
+  border: 1px solid #397CAC;
+  padding: .5em 1em;
+  border-radius: 0.2em;
+  text-decoration: none;
+}
+
+h3 {
+  margin-top: 1.5em;
+  color: black;
+  font-weight: 200;
+}
+
 .post_content {
+  margin-bottom: 3em;
+  max-width: 80%;
   h1 {
     font-weight: 100;
     font-size: 20px;
@@ -27,21 +102,73 @@
     margin-top: 0;
   }
   p {
-    color: #B2BAC2;
+    color: #333377;
     font-size: 14px;
     font-weight: 100;
     line-height: 1.5;
   }
+  .content {
+    width: 75%;
+    float: left;
+  }
+  .buttons {
+    width: 25%;
+    float: left;
+    text-align: right;
+    font-size: 14px;
+    padding-top: 1.5em;
+    .edit_button {
+      color: green;
+    }
+    a {
+      border: 1px solid #397CAC;
+      padding: .5em 1em;
+      border-radius: 0.2em;
+      text-decoration: none;
+      margin-right: 2%;
+    }
+  }
+  .comment {
+    border-bottom: 1px solid #D1D1D1;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+  }
+  .comment_content {
+      margin: 0;
+      padding: 0;
+  }
+  .comment_author {
+      color: #397CAC;
+      margin-top: .2em;
+      font-size: 10px;
+      font-weight: 700;
+  }
+  #comment_comment {
+    width: 100%;
+    min-height: 200px;
+    border: 1px solid #D1D1D1;
+    border-radius: .2em;
+    margin: 1em 0;
+  }
+  .submit {
+    background-color: #397CAC;
+    border: none;
+    border-radius: 0.2em;
+    color: white;
+    font-weight: 100;
+    padding: .5em 1em;
+  }
 }
 
 #posts, .post_content {
+  margin: 0 auto;
+  max-width: 80%;
   background-color: white;
   padding: 2em 5%;
   border-radius: .5em;
   .post {
     padding: 1em 0;
     margin: 1em 0;
-
     .post_title {
       margin: 0;
       a {

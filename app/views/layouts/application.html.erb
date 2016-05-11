@@ -9,7 +9,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render 'layouts/navigation' %>
+  <%= render 'layouts/forumHeader' if !@disable_forumhead %>
+  <%= render 'layouts/navigation' unless @disable_nav %>
+  <%= render 'layouts/forumNav' if !@disable_forumnav %>
+
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>

@@ -17,6 +17,7 @@ class PlayersController < ApplicationController
 
   attr_accessor :players
   before_action :authorise, :only => [:index]
+  before_filter :disable_forumnav
 
   def month3
   end
@@ -29,29 +30,42 @@ class PlayersController < ApplicationController
 
   def u18men
     @teams = Team.all
+      @disable_forumhead = true
   end
 
   def u18women
     @teams = Team.all
+      @disable_forumhead = true
   end
 
   def aamen
     @teams = Team.all
+      @disable_forumhead = true
   end
 
   def aamix
     @teams = Team.all
+      @disable_forumhead = true
   end
 
   def competitions
+      @disable_forumhead = true
   end
 
   def index
     @players = Player.all
+      @disable_forumhead = true
   end
 
   def new
     @player = Player.new
+
+  end
+
+  def show
+    @player = Player.find(params[:id])
+    @team = @player.team_id
+      @disable_forumhead = true
   end
 
   def create
@@ -65,18 +79,21 @@ class PlayersController < ApplicationController
   end
 
   def edit
-    @player = @current_player
+    @player = current_player
+      @disable_forumhead = true
   end
 
   def update
-    player = @current_player
+      @disable_forumhead = true
+
+    player = current_player
     player.update player_params
     redirect_to root_path
   end
 
   private
     def player_params
-      params.require(:player).permit(:email, :name, :password, :password_confirmation, :dob)
+      params.require(:player).permit(:email, :name, :password, :password_confirmation, :dob, :avatar)
     end
 
     def authorise

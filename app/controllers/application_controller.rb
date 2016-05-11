@@ -5,9 +5,20 @@ class ApplicationController < ActionController::Base
 
   # protect_from_forgery with: :exception
 
+  def player_id
+    @player = current_player.id
+  end
+
+  def disable_forumhead
+    @disable_forumhead = true
+  end
+
+  def disable_forumnav
+    @disable_forumnav = true
+  end
 
   def current_player
-      @current_player ||= Player.find(session[:player_id]) if session[:player_id]  #returns user object
+      @current_player ||= Player.find_by(:id => session[:player_id]) if session[:player_id]  #returns user object
   end
 
   def logged_in?

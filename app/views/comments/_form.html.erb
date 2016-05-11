@@ -12,10 +12,9 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :comment %><br>
-    <%= f.text_field :comment %>
+    <%= f.text_area :comment, :required => "true" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => 'submit' %>
   </div>
 <% end %>

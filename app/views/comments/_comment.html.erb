@@ -1,11 +1,11 @@
-<div class="comment">
 
-  <p>  <%= comment.comment %></p>
-  <p>  <%= comment.player.email %></p>
-  <p>
-    <%= link_to "Edit", edit_post_comment_path(comment.post, comment)  %>
-    <%= link_to "Delete", [comment.post, comment], method: :delete, data: { confirm: "Are you sure?" }  %>
-  </p>
-
-
+<div class="content">
+  <p class="comment_content">  <%= comment.comment %></p>
+  <p class="comment_author">  <%= comment.player.name  %></p>
 </div>
+<p class="buttons">
+    <% if comment.player_id == current_player.id %>
+    <%= link_to "Edit", edit_post_comment_path(comment.post, comment), class: "edit_button"  %>
+    <%= link_to "Delete", [comment.post, comment], method: :delete, data: { confirm: "Are you sure?" }  %>
+    <% end %>
+</p>

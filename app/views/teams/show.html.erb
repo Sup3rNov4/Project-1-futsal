@@ -1,0 +1,29 @@
+<div class="col-md-6 col-md-offset-3">
+  <div class="panel panel-default">
+    <div class="panel-body">
+
+<p id="notice"><%= notice %></p>
+<h1><%= @team.name %></h1>
+<break>
+
+
+<p>Team Name: <%= @team.name %></p>
+<p>Competition: <%= @team.competition %></p>
+
+  <break>
+  <hr>
+  <break>
+    <h2>Player List</h2>
+    <li><%= link_to @team.players[0].name, player_path(@team.players[0].id) %> (GK)</li>
+    <li><%= link_to @team.players[1].name, player_path(@team.players[1].id) %></li>
+    <li><%= link_to @team.players[2].name, player_path(@team.players[2].id) %></li>
+    <li><%= link_to @team.players[3].name, player_path(@team.players[3].id) %></li>
+    <li><%= link_to @team.players[4].name, player_path(@team.players[4].id) %></li>
+
+<break>
+
+<%= link_to 'Back', root_path %>
+
+</div>
+</div>
+</div>

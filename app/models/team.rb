@@ -14,14 +14,17 @@ class Team < ActiveRecord::Base
 
   def wins
     games.where :won => true
+
   end
 
   def losses
     games.where :lost => true
+
   end
 
   def draws
     games.where :drawn => true
+
   end
 
 end

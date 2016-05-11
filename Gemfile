@@ -29,6 +29,8 @@ gem 'will_paginate-bootstrap'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'youtube_it', '~> 2.4.0'
 gem "jquery-slick-rails"
+gem 'carrierwave'
+gem 'cloudinary'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 

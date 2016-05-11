@@ -16,23 +16,22 @@
       <ul class="nav navbar-nav">
         <li class="active"><%= link_to "Home", root_path %><span class="sr-only">(current)</span></li>
         <% if logged_in? %>
-        <li><%= link_to "Competitions", competition_path %></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View <span class="caret"></span></a>
+          <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Competitions <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><%= link_to "Something", root_path %></li>
-            <li><%= link_to "Something", root_path %></li>
-            <li><%= link_to "Something", root_path %></li>
             <li role="separator" class="divider"></li>
-            <li><%= link_to "Contact US", root_path %></li>
+            <li><%= link_to "U-18 Mens", u18men_path %></li>
+            <li><%= link_to "U-18 Womens", u18women_path %></li>
             <li role="separator" class="divider"></li>
-            <li><%= link_to "Highlights", highlight_path %></li>
+            <li><%= link_to "All-Ages Mens", aamen_path %></li>
+            <li><%= link_to "All-Ages Mixed", aamix_path %></li>
           </ul>
-          <li><%= link_to "Forum", forum_path %></li>
+          <li><%= link_to "Highlights", highlight_path %></li>
+          <li><%= link_to "Contact Us", contact_path %></li>
+          <li><%= link_to "Forum", posts_path %></li>
         </li>
         <% end %>
       </ul>
-      <div id="search"></div>
       <ul class="nav navbar-nav navbar-right">
         <% if logged_in? %>
           <li id="username">
@@ -40,13 +39,12 @@
             </li>
           <li> <%= link_to "log out", root_path, method: :delete %> </li>
           <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account  <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                      <li><%= link_to "View Profile", "#player" %></li>
-                      <li><%= link_to "Edit Profile", "#editplayer" %></li>
+                      <li><%= link_to "View Profile", player_path(current_player.id) %></li>
+                      <li><%= link_to "Edit Profile", edit_player_path %></li>
                       <li role="separator" class="divider"></li>
-                      <li><%= link_to "Something", root_path %></li>
-
+                      <%= link_to "FIFA Rules", "http://www.fifa.com/mm/document/footballdevelopment/refereeing/51/44/50/lawsofthegamefutsal2014_15_eneu_neutral.pdf", :target => "_blank" %>
                     </ul>
             </li>
         <% else %>

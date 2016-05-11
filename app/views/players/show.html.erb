@@ -1,0 +1,46 @@
+
+  <div class="row" id="pic_show">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-default">
+      <div class="panel heading pic_image">
+      <h2><% unless @player.avatar_url.nil? %><%= image_tag @player.avatar_url(:display) %><% end %></h2>
+      </div>
+      <div class="panel-body">
+
+<p id="notice"><%= notice %></p>
+  <h1><%= @player.name %></h1>
+  <break>
+  <p>Email: <%= @player.email %></p>
+  <p>Team: <%= link_to @player.team.name, team_path(@player.team.id) %></p>
+  <p>DOB: <%= @player.dob %></p>
+  <p>Joined: <%= @player.created_at %></p>
+  <% if @player.id == current_player.id %>
+  <%= link_to 'Edit', edit_player_path(@player) %> |
+  <%= link_to 'Back', root_path %>
+  <% end %>
+  <break>
+    <hr>
+    <break>
+      <h2>Player Stats</h2>
+
+        <% if @player.goals[0].conceded == "N/A" %>
+          <tr>
+            <td>Games Played: <%= @player.team.games.count %></td>
+            <td>Goals Scored: <%= @player.goals[0].scored %></td>
+            <td>Assists: <%= @player.goals[0].assists %></td>
+          </tr>
+        <% else @player.goals[0].conceded %>
+          <tr>
+            <td>Games Played: <%= @player.team.games.count %></td>
+            <td>Goals Conceded: <%= @player.goals[0].conceded %></td>
+            <td>Goals Scored: <%= @player.goals[0].scored %></td>
+            <td>Assists: <%= @player.goals[0].assists %></td>
+          </tr>
+        <% end %>
+
+<break>
+
+</div>
+</div>
+</div>
+</div>

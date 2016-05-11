@@ -24,6 +24,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  resources :teams, :only => [:new, :create, :index, :update]
+  resources :topics
   resources :players, :only => [:new, :create, :index, :update]
 
   get "/players/edit" => "players#edit", :as => 'edit_player'
@@ -37,10 +39,17 @@ Rails.application.routes.draw do
   get "/players/aamix" => "players#aamix", :as => "aamix"
   get "/players/u18men" => "players#u18men", :as => "u18men"
   get "/players/u18women" => "players#u18women", :as => "u18women"
+  get "players/:id" => "players#show", :as => 'player_profile'
+  get "teams/:id" => "teams#show", :as => "team_profile"
 
-  get "/forum" => "threads#index"
 
+  post "posts/search" => "posts#search", :as => "search_posts"
 
+  get "/forum" => "topics#index"
+  get "/forum/strategies" => "topics#strategies"
+  get "/forum/competitions" => "topics#competitions"
+  get "/forum/general_discussion" => "topics#general_discussion"
+  get "/forum/funny_stuff" => "topics#funny_stuff"
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'
@@ -48,5 +57,7 @@ Rails.application.routes.draw do
   get '/pages/welcome' => "pages#welcome", :as => "welcome"
   get '/pages/highlights' => "pages#highlights", :as => "highlight"
   get '/pages/archives' => "pages#archives", :as => "archive"
+  get '/pages/contactUs' => 'pages#contactUs', :as => "contact"
+  get '/pages/thankyou' => 'pages#thankyou', :as => "thankyou"
 
 end

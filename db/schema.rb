@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160509020027) do
+ActiveRecord::Schema.define(version: 20160511004822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 20160509020027) do
     t.boolean "lost"
     t.boolean "drawn"
     t.integer "team_id"
+    t.boolean "homeTeam"
+    t.integer "week_id"
   end
 
   create_table "games_seasons", id: false, force: :cascade do |t|
@@ -66,6 +68,7 @@ ActiveRecord::Schema.define(version: 20160509020027) do
     t.datetime "updated_at"
     t.boolean  "admin",           default: false
     t.text     "image"
+    t.string   "avatar"
   end
 
   create_table "players_seasons", id: false, force: :cascade do |t|
@@ -84,6 +87,7 @@ ActiveRecord::Schema.define(version: 20160509020027) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "player_id"
+    t.text     "topic"
   end
 
   create_table "seasons", force: :cascade do |t|
@@ -101,18 +105,11 @@ ActiveRecord::Schema.define(version: 20160509020027) do
     t.text "competition"
   end
 
-  create_table "topics", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "post_id"
-  end
-
   create_table "weeks", force: :cascade do |t|
     t.integer  "week"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "game_id"
+    t.integer  "season_id"
   end
 
   add_foreign_key "comments", "players"

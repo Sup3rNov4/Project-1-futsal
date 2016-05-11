@@ -1,20 +1,26 @@
-<div class="post_content">
-  <header class="forum_header">
-    <h1><%= link_to "FutsalMundial Forum", "/posts" %></h1>
-  </header>
+<div class="post_content" style="margin-bottom: 3em">
 
-<p>
   <h1><%= @post.title %></h1>
-  <%= @post.content %>
-</p>
+  <hr>
+  <p class="content_post"> <%= @post.content %></p>
+
 
 <div class="post_comments">
-  <h2><%= @post.comments.count %></h2>
+  <h2><%= @post.comments.count %> Comments</h2>
+
   <%= render @post.comments %>
+</div>
   <h3> Reply to thread </h3>
   <%= render "comments/form" %>
-</div>
-<%= link_to "Edit", edit_post_path(@post) %>
-<%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are you sure you want to delete your post?"} %>
-<%= link_to "Home", root_path %>
+
+<break>
+  <hr>
+  <break>
+
+    <% if @post.player_id == current_player.id %>
+      <%= link_to "Edit", edit_post_path(@post), class: "post_button" %>
+      <%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are you sure you want to delete your post?"}, class: "post_button" %>
+    <% end %>
+
+
 </div>

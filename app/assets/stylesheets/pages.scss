@@ -5,3 +5,194 @@
 .form-group {
   text-align: center;
 }
+
+// .slick-prev:after {
+//   content: ">";
+//   color: red;
+//   font-size: 30px;
+// }
+//
+// .slick-prev:before {
+//   content: "<";
+//   color: red;
+//   font-size: 30px;
+// }
+
+.slick-slide img {
+  width: 80vw;
+}
+
+
+td {
+  border: 2px solid black;
+  vertical-align:middle;
+  text-align: center;
+  padding: 5px;
+
+}
+
+td:hover {
+  background-color: #f5f5f5;
+}
+
+table {
+  vertical-align: middle;
+  border-collapse: collapse;
+  padding: 10px;
+  max-width: 60%;
+  line-height: 2em;
+  color: black;
+  font-size: 15px;
+}
+
+a {
+  margin-left: 5px;
+}
+
+.gohome a {
+  color: yellow;
+}
+
+/*.nav {
+  font-size: 20px;
+  background-color: gainsboro;
+  flex-grow: 1;
+  justify-content: space-around;
+  padding: 5px;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}*/
+
+/*.nav a {
+  color: white;
+}*/
+
+.social {
+  background-color: lightblue;
+  color: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.social a {
+  opacity: 0.9;
+}
+
+.social a:hover {
+  opacity: 1;
+}
+
+.wrap {
+  background: linear-gradient(orange, lightblue);
+  padding: 10px;
+  color: black;
+}
+
+.social img {
+  border-radius: 25%;
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+/*body {
+  box-sizing: border-box;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  color: black;
+  background: linear-gradient(
+    to right,
+    #ff9e2c 0%,
+    #ff9e2c 50%,
+    #b6701e 50%,
+    #b6701e 100%
+  );
+}*/
+
+h1 {
+  text-shadow: 0 5px 0 #FFFFF;
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.welcome {
+  color: lavender;
+}
+
+h2.error {
+  color: lavender;
+  margin-top:40px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+p {
+  font-size: 15px;
+}
+
+.main {
+  text-align: justify;
+}
+
+.comps {
+  text-align: center;
+}
+
+.fade {
+  opacity: 1;
+  display: inline-block;
+}
+
+.slick-slide img {
+  /*display: block;
+  margin: 0 auto;*/
+  height: 350px;
+  width: 500px;
+}
+
+.slick-dots {
+  visibility: hidden;
+  display: none;
+}
+
+/*.fade img {
+  max-width: 50%;
+}*/
+
+.form-group {
+  display: block;
+  font-size: 18px;
+  flex-direction: column;
+}
+
+.container {
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 350px) {
+  .nav {
+    position: relative;
+  }
+  .nav a {
+    display:block
+  }
+  iframe {
+    width: 330px;
+    height:250px;
+  }
+}
