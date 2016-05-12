@@ -4,18 +4,19 @@
 
 <table class="ladder" align="center">
 
+  <tr>
+    <td>Team</td>
+    <td>Points</td>
+    <td>Played</td>
+    <td>Won</td>
+    <td>Lost</td>
+    <td>Drawn</td>
+  </tr>
 <% @teams.each do |team| %>
 <% if team.competition === "All-Age Mixed"%>
-
-<tr>
-  <td>Team</td>
-  <td>Played</td>
-  <td>Won</td>
-  <td>Lost</td>
-  <td>Drawn</td>
-</tr>
   <tr>
     <td><%= link_to team.name, team_path(team.id) %></td>
+    <td><%= team.points %></td>
     <td><%= team.games.count %></td>
     <td><%= team.wins.count %></td>
     <td><%= team.losses.count %></td>

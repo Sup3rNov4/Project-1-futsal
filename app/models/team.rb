@@ -17,6 +17,10 @@ class Team < ActiveRecord::Base
 
   end
 
+  def points
+    wins.count * 3 + draws.count
+  end
+
   def losses
     games.where :lost => true
 
