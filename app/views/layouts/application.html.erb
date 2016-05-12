@@ -8,16 +8,16 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= params[:controller] %>">
   <%= render 'layouts/forumHeader' if !@disable_forumhead %>
   <%= render 'layouts/navigation' unless @disable_nav %>
   <%= render 'layouts/forumNav' if !@disable_forumnav %>
 
+  <%= yield %>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
-  <%= yield %>
 
 </body>
 </html>

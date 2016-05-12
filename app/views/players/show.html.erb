@@ -24,19 +24,34 @@
       <h2>Player Stats</h2>
 
         <% if @player.goals[0].conceded == "N/A" %>
+        <table>
+        <tr>
+          <td>Games Played </td>
+          <td>Goals Scored </td>
+          <td>Assists </td>
+        <tr>
           <tr>
-            <td>Games Played: <%= @player.team.games.count %></td>
-            <td>Goals Scored: <%= @player.goals[0].scored %></td>
-            <td>Assists: <%= @player.goals[0].assists %></td>
+            <td><%= @player.team.games.count %></td>
+            <td><%= @player.goals[0].scored %></td>
+            <td><%= @player.goals[0].assists %></td>
           </tr>
+        </table>
         <% else @player.goals[0].conceded %>
+        <table>
+        <tr>
+          <td>Games Played </td>
+          <td>Goals Conceded </td>
+          <td>Goals Scored </td>
+          <td>Assists </td>
+        <tr>
           <tr>
-            <td>Games Played: <%= @player.team.games.count %></td>
-            <td>Goals Conceded: <%= @player.goals[0].conceded %></td>
-            <td>Goals Scored: <%= @player.goals[0].scored %></td>
-            <td>Assists: <%= @player.goals[0].assists %></td>
+            <td><%= @player.team.games.count %></td>
+            <td><%= @player.goals[0].conceded %></td>
+            <td><%= @player.goals[0].scored %></td>
+            <td><%= @player.goals[0].assists %></td>
           </tr>
         <% end %>
+      </table>
 
 <break>
 

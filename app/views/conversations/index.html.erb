@@ -17,7 +17,7 @@
   </div>
  </div>
 </div>
-<div class="ui segment">
+<!-- <div class="ui segment">
  <h3>All Players</h3>
   <div class="ui list">
    <% @players.each do |player| %>
@@ -28,4 +28,23 @@
   <% end %>
  <% end %>
  </div>
-</div>
+</div> -->
+<table style="width:50vw">
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th>Team</th>
+      </tr>
+  </thead>
+  <tbody>
+      <% @players.each do |player| %>
+      <% if player.id != current_player.id %>
+          <tr>
+            <td><%= player.name %></td>
+            <td><%= player.team.name %></td>
+            <td style="text-align:right;"> <%= link_to 'Send Message', conversations_path(sender_id: current_player.id, recipient_id: player.id), method: 'post'%> </td>
+          </tr>
+      <% end %>
+      <% end %>
+  </tbody>
+</table>

@@ -1,4 +1,4 @@
-<div class="fade">
+<div class="slider">
     <div index="0"><%= image_tag "IMG_8202.jpg" %></div>
     <div index="1"><%= image_tag "IMG_8185.jpg" %></div>
     <div index="2"><%= image_tag "IMG_8174.jpg" %></div>
@@ -6,36 +6,38 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-  $('.fade').slick({
-    dots: false,
+  $('.slider').slick({
+    dots: true,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 3000,
+    slidesToShow: 1,
     pauseOnHover: true,
     responsive: true,
+    adaptiveHeight: true,
     speed: 750,
     fade: true,
     cssEase: 'linear',
-    onAfterChange: function(){
-        //check the length of total items in .slide container
-        //if that number is the same with the number of the last slide
-        //Then pause the slider
-        if( item_length == slider.slickCurrentSlide() ){
-            //this should do the same thing -> slider.slickPause();
-            slider.slickSetOption("autoplay",false,false)
-        };
-    }
+    // onAfterChange: function(){
+    //     //check the length of total items in .slide container
+    //     //if that number is the same with the number of the last slide
+    //     //Then pause the slider
+    //     if( item_length == slider.slickCurrentSlide() ){
+    //         //this should do the same thing -> slider.slickPause();
+    //         slider.slickSetOption("autoplay",false,false)
+    //     };
+    // }
   });
 });
 </script>
 
-<h1>FutsalMundial</h1>
+<h1 class="homeH1">FutsalMundial</h1>
 
 <div>
 
 </div>
 
-<h2>News</h2>
+<h2 class="homeH2">News</h2>
 <p>
   FutsalMundial is a local competition designed to suit the needs of the players. For team registrations
   and general enquiries please Email: admin@futsalmundial.com.
@@ -49,7 +51,7 @@ $(document).ready(function(){
   misconduct can result in a forfeit.
 </p>
 
-<h2>General Info</h2>
+<h2 class="homeH2">General Info</h2>
 
 <p>
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt

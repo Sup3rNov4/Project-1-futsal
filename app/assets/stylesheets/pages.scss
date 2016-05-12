@@ -2,26 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.contactUsPage {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.wrap {
+  background: linear-gradient(orange, lightblue);
+  padding: 10px;
+  color: black;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.btn-danger {
+  margin-top: 10px;
+}
+
 .form-group {
   text-align: center;
 }
 
-// .slick-prev:after {
-//   content: ">";
-//   color: red;
-//   font-size: 30px;
-// }
-//
-// .slick-prev:before {
-//   content: "<";
-//   color: red;
-//   font-size: 30px;
-// }
-
-.slick-slide img {
-  width: 80vw;
+.buttons{
+  cursor: pointer;
 }
 
+.slick-prev {
+  visibility: hidden;
+  display: none;
+}
+
+.slick-next {
+  display:none;
+  visibility: hidden;
+}
 
 td {
   border: 2px solid black;
@@ -71,7 +85,7 @@ a {
 }*/
 
 .social {
-  background-color: lightblue;
+  background-color: lightsteelblue;
   color: black;
   position: fixed;
   bottom: 0;
@@ -87,18 +101,13 @@ a {
   opacity: 1;
 }
 
-.wrap {
-  background: linear-gradient(orange, lightblue);
-  padding: 10px;
-  color: black;
-}
-
 .social img {
   border-radius: 25%;
   max-width: 50px;
   max-height: 50px;
   margin-right: 5px;
   margin-top: 5px;
+  margin: 0 auto;
 }
 
 /*body {
@@ -116,15 +125,18 @@ a {
   );
 }*/
 
-h1 {
+.homeH1 {
   text-shadow: 0 5px 0 #FFFFF;
   font-size: 50px;
+  margin-top: -10%;
+  text-align: center;
 }
 
-h2 {
+.homeH2 {
   font-size: 30px;
-  margin-top: 20px;
+  margin-top: 5%;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .welcome {
@@ -140,8 +152,9 @@ h3 {
   font-size: 22px;
 }
 
-p {
+p.pages {
   font-size: 15px;
+  text-align: justify;
 }
 
 .main {
@@ -158,10 +171,11 @@ p {
 }
 
 .slick-slide img {
-  /*display: block;
-  margin: 0 auto;*/
-  height: 350px;
-  width: 500px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 0;
+  height: 50vh;
+  width: 75vw;
 }
 
 .slick-dots {

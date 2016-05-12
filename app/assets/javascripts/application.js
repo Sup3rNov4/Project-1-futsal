@@ -16,5 +16,4 @@
 //= require jquery.slick
 //= require bootstrap-sprockets
 
-//= require funtext
 //= require_tree .

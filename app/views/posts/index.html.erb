@@ -1,20 +1,25 @@
-<div class="post_index">
+<div class="container-fluid">
+  <div class="post_index">
     <div id="posts">
-<div class="search_form">
-  <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
-  <%= submit_tag "Search", :name => nil %>
-    <% end %>
-    <%= link_to "All Posts", "/posts", class: "all_posts" %>
-  </div>
+      <div class="row">
+        <div class="col-md-8">
+          <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+            <%= submit_tag "Search", :name => nil %>
+          <% end %>
+        </div>
+        <div class="col-md-4">
+          <h3 class="create_new_post"><%= link_to "New Post", new_post_path, :class => "new_post" %></h3>
+        </div>
+      </div>
+      <%= link_to "All Posts", "/posts", class: "all_posts" %>
 
-
-    <% @posts.each do |post| %>
-    <div class="post">
-      <h2 class="post_title"><%= link_to post.title, post %></h2>
-      <p class="post_date"><%= "Published " + time_ago_in_words(post.created_at) + " ago by "%><%= post.player.email %></p>
-      <% end %>
+      <% @posts.each do |post| %>
+      <div class="post">
+        <h2 class="post_title"><%= link_to post.title, post %></h2>
+        <p class="post_date"><%= "Published " + time_ago_in_words(post.created_at) + " ago by "%><%= post.player.email %></p>
+        <% end %>
+      </div>
     </div>
   </div>
-  <h3 class="create_new_post"><%= link_to "New Post", new_post_path, :class => "new_post" %></h3>
 </div>
