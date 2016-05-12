@@ -1,3 +1,4 @@
+
 <div class="wrap">
 
 <h2>Highlights</h2>
@@ -7,6 +8,15 @@
 <h4>This Week's Highlight</h4>
 
 <p>
-  <iframe width="480" height="300" src="https://www.youtube.com/embed/7juzaPpxN8Y?controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+  <iframe class="iframe" width="480" height="300" src="https://www.youtube.com/embed/7juzaPpxN8Y?controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+
 </p>
+
+
+
+<script>
+$('.iframe').on('click', function () {
+    $('#overlay, #overlay-back').fadeIn(500);
+});
+</script>
 </div>

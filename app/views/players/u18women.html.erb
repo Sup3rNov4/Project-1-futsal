@@ -2,72 +2,71 @@
 
 <h1>U-18s Women</h1>
 
-<table class="ladder" align="center">
-
-  <tr>
+<h4 id="xyzxyz">Winter Season 2016</h4>
+<table class="table table-bordered" id="ladder" align="center">
+  <tr class="warning">
     <td>Team</td>
-    <td>Points</td>
-    <td>Played</td>
-    <td>Won</td>
-    <td>Lost</td>
-    <td>Drawn</td>
+    <td>Pts</td>
+    <td>P</td>
+    <td>W</td>
+    <td>L</td>
+    <td>D</td>
+    <td>GF</td>
+    <td>GA</td>
+    <td>GD</td>
   </tr>
 <% @teams.each do |team| %>
 <% if team.competition === "U18 Women"%>
   <tr>
-    <td><%= link_to team.name, team_path(team.id) %></td>
+    <td><%= link_to team.name, team_path(team.id), :class => "tname" %></td>
     <td><%= team.points %></td>
     <td><%= team.games.count %></td>
     <td><%= team.wins.count %></td>
     <td><%= team.losses.count %></td>
     <td><%= team.draws.count %></td>
+    <td><%= team.goals[0].scored + team.goals[1].scored + team.goals[2].scored + team.goals[3].scored + team.goals[4].scored %></td>
+    <td><%= team.goals[0].conceded  %></td>
+    <td><%= (team.goals[0].scored + team.goals[1].scored + team.goals[2].scored + team.goals[3].scored + team.goals[4].scored) - team.goals[0].conceded.to_i %></td>
+
   </tr>
   <% end %>
   <% end %>
 </table>
 
-<h3>Draw</h3>
-<table class="draw" align="center">
+<h4 id="xyzxyz">Upcoming Draw</h4>
+<table class="table table-bordered" id="draw" align="center">
 
   <tr>
-    <td>15:20</td>
-    <td>Sunday, 10/10/10 </td>
-    <td>Atletico vs Juve</td>
+    <td class="danger">15:20</td>
+    <td class="success">Saturday, 9/10/16 </td>
+    <td class="warning">Atletico   vs   Juve</td>
   </tr>
   <tr>
-    <td>14:40</td>
-    <td>Sunday, 17/10/10</td>
-    <td>Juve vs Atletico</td>
+    <td class="danger">14:40</td>
+    <td class="success">Saturday, 9/10/16</td>
+    <td class="warning">Leicester   vs   Tottenham</td>
   </tr>
   <tr>
-    <td>15:20</td>
-    <td>Sunday, 24/10/10</td>
-    <td>Atletico vs Juve</td>
+    <td class="danger">15:20</td>
+    <td class="success">Saturday, 16/10/16</td>
+    <td class="warning">Juve   vs   Chelsea</td>
   </tr>
   <tr>
-    <td>16:00</td>
-    <td>Sunday, 31/10/10</td>
-    <td>Juve vs Atletico</td>
+    <td class="danger">16:00</td>
+    <td class="success">Saturday, 16/10/16</td>
+    <td class="warning">Tottenham   vs   Atletico</td>
   </tr>
   <tr>
-    <td>14:40</td>
-    <td>Sunday, 7/11/10</td>
-    <td>Atletico vs Juve</td>
+    <td class="danger">14:40</td>
+    <td class="success">Saturday, 23/11/16</td>
+    <td class="warning">Chelsea   vs   Juve</td>
   </tr>
   <tr>
-    <td>15:20</td>
-    <td>Sunday, 14/11/10</td>
-    <td>Juve vs Rovers</td>
+    <td class="danger">15:20</td>
+    <td class="success">Saturday, 23/11/16</td>
+    <td class="warning">Atletico   vs   Leicester</td>
   </tr>
 </table>
 
 <p></p>
 <%= link_to "Go Back", competition_path %>
-
-</div>
-<div class="social">
-        <%=link_to image_tag("fblogo.jpg"), "https://www.facebook.com/", :target => "_blank" %>
-        <%=link_to image_tag("instalogo.jpg"), "https://www.instagram.com/", :target => "_blank" %>
-        <%=link_to image_tag("twitter.png"), "https://www.twitter.com/", :target => "_blank" %>
-    <p>Copyright © 2016 NSWhales Futsal Association</p>
-</div>

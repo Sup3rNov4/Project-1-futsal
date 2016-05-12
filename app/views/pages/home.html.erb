@@ -30,13 +30,13 @@ $(document).ready(function(){
   });
 });
 </script>
-
+<div class="container">
 <h1 class="homeH1">FutsalMundial</h1>
 
 <div>
 
 </div>
-
+<% if @current_player = true %>
 <h2 class="homeH2">News</h2>
 <p>
   FutsalMundial is a local competition designed to suit the needs of the players. For team registrations
@@ -50,7 +50,7 @@ $(document).ready(function(){
   must wear shin pads and socks. Failure to adhere to the above rules and/or acts of
   misconduct can result in a forfeit.
 </p>
-
+<% end %>
 <h2 class="homeH2">General Info</h2>
 
 <p>
@@ -69,25 +69,12 @@ $(document).ready(function(){
   sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
   est laborum.
 </p>
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-  sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-  est laborum.
-</p>
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-  sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-  est laborum.
-</p>
+
+</div>
 <div class="social">
-        <%=link_to image_tag("fblogo.jpg"), "https://www.facebook.com/", :target => "_blank" %>
-        <%=link_to image_tag("instalogo.jpg"), "https://www.instagram.com/", :target => "_blank" %>
-        <%=link_to image_tag("twitter.png"), "https://www.twitter.com/", :target => "_blank" %>
+        <%=link_to image_tag("fblogo.jpg"), "https://www.facebook.com/", :target => "_blank", :class => "img1"  %>
+        <%=link_to image_tag("instalogo.jpg"), "https://www.instagram.com/", :target => "_blank", :class => "img2" %>
+        <%=link_to image_tag("twitter.png"), "https://www.twitter.com/", :target => "_blank", :class => "img3" %>
     <p>Copyright © 2016 FutsalMundial Association</p>
+    <a id="top_link" href="#top" style="bottom: 25px;">^</a>
 </div>

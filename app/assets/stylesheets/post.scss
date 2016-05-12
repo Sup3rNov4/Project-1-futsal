@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  font-family: sans-serif;
+}
+
 body.posts {
   background-color: gainsboro;
 }
@@ -14,20 +18,18 @@ body.posts label {
   color: steelblue;
 }
 
-// .header {
-//   border: 1px solid gainsboro;
-//   .headerL {
-//     width: 80%;
-//     float: left;
-//   }
-//   .headerR {
-//     width: 20%;
-//     float: left;
-//   }
-// }
-// body {
-//   background-color: gainsboro;
-// }
+#npost {
+  margin-top: -4%;
+}
+
+
+.headerL {
+  text-align: center;
+  a {
+    text-decoration: none;
+
+  }
+}
 
 .all_posts {
   margin-top: .5em;
@@ -48,6 +50,10 @@ body.posts label {
   min-height: 30vh;
   background-color: gainsboro;
   border-radius: .2em;
+}
+
+.comment_count {
+  color: darkgray;
 }
 
 .content_post {
@@ -79,7 +85,7 @@ body.posts label {
   max-width: 80%;
   margin: 0 auto;
   margin-top: 1em;
-  background-color: white;
+  background-color: lightsteelblue;
   border-radius: 0.5em;
   padding: 0.5em;
   .new_post {

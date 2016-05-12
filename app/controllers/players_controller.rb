@@ -19,6 +19,8 @@ class PlayersController < ApplicationController
   before_action :authorise, :only => [:index]
   before_filter :disable_forumnav
 
+
+
   def month3
   end
 

@@ -15,7 +15,7 @@
   <p>DOB: <%= @player.dob %></p>
   <p>Joined: <%= @player.created_at %></p>
   <% if @player.id == current_player.id %>
-  <%= link_to 'Edit', edit_player_path(@player) %> |
+  <%= link_to 'Edit' , edit_player_path(@player)  %>  |
   <%= link_to 'Back', root_path %>
   <% end %>
   <break>
@@ -24,27 +24,27 @@
       <h2>Player Stats</h2>
 
         <% if @player.goals[0].conceded == "N/A" %>
-        <table>
-        <tr>
-          <td>Games Played </td>
-          <td>Goals Scored </td>
+        <table class="table table-bordered" style="margin: 0 auto;">
+        <tr class="info">
+          <td>Played </td>
+          <td>Goals </td>
           <td>Assists </td>
         <tr>
-          <tr>
+          <tr class="success">
             <td><%= @player.team.games.count %></td>
             <td><%= @player.goals[0].scored %></td>
             <td><%= @player.goals[0].assists %></td>
           </tr>
         </table>
         <% else @player.goals[0].conceded %>
-        <table>
-        <tr>
-          <td>Games Played </td>
-          <td>Goals Conceded </td>
-          <td>Goals Scored </td>
+        <table class="table table-bordered" style="margin: 0 auto;">
+        <tr class="info">
+          <td>Played </td>
+          <td>Conceded </td>
+          <td>Goals </td>
           <td>Assists </td>
         <tr>
-          <tr>
+          <tr class="success">
             <td><%= @player.team.games.count %></td>
             <td><%= @player.goals[0].conceded %></td>
             <td><%= @player.goals[0].scored %></td>

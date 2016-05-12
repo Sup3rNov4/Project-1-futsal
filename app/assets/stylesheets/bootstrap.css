@@ -6815,11 +6815,11 @@ table,
 .table {
   font-size: 12px;
 }
-table a:not(.btn),
+/*table a:not(.btn),
 .table a:not(.btn) {
   color: #fff;
   text-decoration: underline;
-}
+}*/
 table .dropdown-menu a,
 .table .dropdown-menu a {
   text-decoration: none;

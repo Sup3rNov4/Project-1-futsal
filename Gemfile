@@ -24,6 +24,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "pry-rails"
 gem "annotate"
 gem "jwplayer-rails"
+gem 'font-awesome-sass'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'bootstrap-sass', '~> 3.3.6'
