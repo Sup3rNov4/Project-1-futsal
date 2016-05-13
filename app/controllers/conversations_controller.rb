@@ -5,7 +5,7 @@ class ConversationsController < ApplicationController
     @disable_nav = true
     @players = Player.all
     @conversations = Conversation.all
-
+    # @conversations = Conversation.paginate(page: params[:page], per_page: 5)
   end
 
   def show
@@ -14,7 +14,7 @@ class ConversationsController < ApplicationController
 
   def create
     @disable_nav = true
-    if Conversation.between(params[:sender_id], params[:recipient_id]) == true
+    if Conversation.between(params[:sender_id], params[:recipient_id])
       @conversation = Conversation.between(params[:sender_id], params[:recipient_id]).first
     else
       @conversation = Conversation.create!(conversation_params)
