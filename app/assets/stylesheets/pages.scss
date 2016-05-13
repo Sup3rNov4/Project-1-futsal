@@ -139,6 +139,8 @@ a {
   margin-top: 5px;
 }
 
+
+
 /*body {
   box-sizing: border-box;
   margin-left: 5px;
@@ -154,28 +156,56 @@ a {
   );
 }*/
 
+#inputEmail3 {
+  border-radius: .2em;
+}
+
+#inputName3 {
+  border-radius: .2em;
+}
+
+#inputComment3 {
+  border-radius: .2em;
+}
+
 i {
   margin: 0 auto;
-  
 }
 
 #username {
   padding: 1em;
 }
 
+.navbar-default {
+  li {
+    color: lightblue;
+  }
+  a {
+    color: yellow;
+  }
+  span {
+    color: gainsboro;
+  }
+}
+
 .homeH1 {
   font-family: Impact;
   text-shadow: 0 5 0 #FFFFFF;
   font-size: 50px;
-  margin-top: -5%;
+  margin-top: -6%;
   text-align: center;
 }
 
 .homeH2 {
+  font-family: Impact;
   font-size: 30px;
   margin-top: 5%;
   margin-bottom: 15px;
   text-align: center;
+}
+
+.form-group {
+  border-radius: .5em;
 }
 
 .welcome {
@@ -210,12 +240,24 @@ p.pages {
   display: inline-block;
 }
 
+.slider {
+  .img0 {
+    background-color: black;
+  }
+  .img1 {
+    background-color: black;
+  }
+  .img2 {
+    background-color: black;
+  }
+}
+
 .slick-slide img {
   display: block;
   margin: 0 auto;
   margin-top: 0;
-  height: 50vh;
-  width: 75vw;
+  height: 60vh;
+  width: 80vw;
 }
 
 .slick-dots {

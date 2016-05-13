@@ -1,7 +1,7 @@
 <div class="slider">
-    <div index="0"><%= image_tag "IMG_8202.jpg" %></div>
-    <div index="1"><%= image_tag "IMG_8185.jpg" %></div>
-    <div index="2"><%= image_tag "IMG_8174.jpg" %></div>
+    <div class="img0"><%= image_tag "IMG_8202.jpg" %></div>
+    <div class="img1"><%= image_tag "IMG_8185.jpg" %></div>
+    <div class="img2"><%= image_tag "IMG_8174.jpg" %></div>
 </div>
 
 <script type="text/javascript">
@@ -31,45 +31,85 @@ $(document).ready(function(){
 });
 </script>
 <div class="container">
-<h1 class="homeH1">FutsalMundial</h1>
+  <h1 class="homeH1">FutsalMundial</h1>
 
-<div>
+  <div>
 
-</div>
-<% if @current_player = true %>
-<h2 class="homeH2">News</h2>
-<p>
-  FutsalMundial is a local competition designed to suit the needs of the players. For team registrations
-  and general enquiries please Email: admin@futsalmundial.com.
-</p>
-<p>
-  For lost property please call 0400 000 000 or inquire at the office during business hours.
-</p>
-<p>
-  Please note: No jewellery is allowed to be worn on the field during games. All players
-  must wear shin pads and socks. Failure to adhere to the above rules and/or acts of
-  misconduct can result in a forfeit.
-</p>
-<% end %>
-<h2 class="homeH2">General Info</h2>
+  </div>
+  <% if @current_player == true %>
 
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-  sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-  est laborum.
-</p>
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-  sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-  est laborum.
-</p>
+  <h2 class="homeH2">News</h2>
+  <p>
+    FutsalMundial is a local competition designed to suit the needs of the players. For team registrations
+    and general enquiries please Email: admin@futsalmundial.com.
+  </p>
+  <p>
+    For lost property please call 0400 000 000 or inquire at the office during business hours.
+  </p>
+  <p>
+    Please note: No jewellery is allowed to be worn on the field during games. All players
+    must wear shin pads and socks. Failure to adhere to the above rules and/or acts of
+    misconduct can result in a forfeit.
+  </p>
+  <% end %>
+  <break>
+  <hr>
+  <break>
+  <h2 class="homeH2">General Info</h2>
 
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+    est laborum.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+    est laborum.
+  </p>
+  <break>
+  <hr>
+  <break>
+
+  <div class="col-lg-4">
+    <h2 class="homeH2">Comps</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+        est laborum.
+      </p>
+  </div>
+  <div class="col-lg-4">
+    <h2 class="homeH2">Coaching</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+        est laborum.
+      </p>
+  </div>
+  <div class="col-lg-4">
+    <h2 class="homeH2">Court Hire</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+      ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+      reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </p>
+  </div>
 </div>
 <div class="social">
         <i class="fa fa-facebook-square" aria-hidden="true"></i>
