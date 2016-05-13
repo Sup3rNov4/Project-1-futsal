@@ -1,11 +1,13 @@
+<div class="container">
+  <div class="welcome" style="text-align:center;">
+    <h2>Welcome. Thank you for logging in.</h2>
 
-<div class="welcome">
-<h2>Welcome. Thank you for logging in.</h2>
+    <% if @current_player.present? %>
+    <h3>  You are logged in as <%= @current_player.name %></h3>
+    <% end %>
 
-<h3><% if @current_player.present? %>
-  You are logged in as <%= @current_player.name %>
-<% end %></h3>
-<div class="gohome">
-<%= link_to "Go Back", root_path %>
-</div>
+    <div class="gohome">
+      <%= link_to "Go Back", root_path %>
+    </div>
+  </div>
 </div>
