@@ -1,28 +1,54 @@
-== README
+## Link:
+https://futsalmundial.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Built using:
 
-Things you may want to cover:
+* Rails 4.3.6
+* Ruby 2.3.0
+* Jquery
+* Heroku
+* PostgreSQL
+* Html
+* Css
 
-* Ruby version
+## Gems used:
 
-* System dependencies
+* Annotate
+* Bootstrap-sass 
+* Font-awesome-sass
+* Semantic-ui-sass
+* Cloudinary
+* Jquery-slick-rails
+* Carrierwave
 
-* Configuration
+## Deployed to:
+  Heroku
 
-* Database creation
+## Models:
 
-* Database initialization
+* Player
+* Team
+* Game
+* Week
+* Season
+* Goal
+* Message
+* Conversation
+* Post
+* Comment
 
-* How to run the test suite
+## FutsalMundial:
 
-* Services (job queues, cache servers, search engines, etc.)
+FutsalMundial was a class project with the aim to create a site to accommodate for a local futsal competition.
 
-* Deployment instructions
+## Overview:
 
-* ...
+This project was done solely using Ruby on Rails.  
 
+## Bugs:
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* none messaging/conversation section bugged on heroku.
+
+## Future additions:
+
+* Ongoing project with the aim to launch an actual local futsal competition.
